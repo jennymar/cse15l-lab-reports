@@ -1,13 +1,13 @@
 # Week 1 Lab Report
 
-The is a tutorial on how to log into a remote account on ieng6!
+This is a tutorial on how to log into a remote account on ieng6!
 
 ### Step 1: Installing VScode
 ---
 ![image](/vscodescreenshot.png)
 
 The first step is to install the VScode editor onto your computer. Because I already had VScode installed
-on my computer, I skipped this step. VScode is a free online code editor that is very useful!
+on my computer, I skipped this step. VScode is a free online code editor that is very easy to use and can be installed from [this link](https://code.visualstudio.com/)!
 
 
 ### Step 2: Remotely Connecting
