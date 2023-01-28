@@ -37,10 +37,12 @@ I inputed an empty int array with 0 values.
 Symptom:
 The failure-inducing input test case returned the error below.
 > arrays first differed at element [0]; expected:[6] but was:[0] at ArrayTests.testReversed(ArrayTests.java:26)
+
 This means that the buggy method contained the value 0 at the index 0, but we expected the program to have the value 6 in that position.
 
 Bug:
-In the original code, the statement within the for loop sets arr to a value from newArray, but newArray is merely an int array with 0 in all values. Instead, we want to set newArray to a value form arr because arr is the int array with the real values we want to reverse. Additionally, we want to return newArray and not arr because the method wants to return a new array with all elements of the input array reversed, not the original array. 
+In the original code, the statement within the for loop sets arr to a value from newArray, but newArray is merely an int array with 0 in all positions. Instead, we want to set newArray to a value form arr because arr is the int array with the real values we want to reverse. Additionally, we want to return newArray and not arr because the method wants to return a new array with all elements of the input array reversed, not the original array. 
+
 Buggy Code:
 
 ```
@@ -70,7 +72,7 @@ The fix now allows us to deep copy values from the original array into the new a
 
 ### Part 3: StringServer Web Server
 ---
-Something that I learned from lab from week 2/3 was about web servers and server client hosting! I did not have any previous experience with how web pages and requests were sent and received, so I found that very interesting. I learned that because the server exists in a different place than the https site I am viewing, multiple people can access and change data that will change the output for all users. I learned that if a port is already being occupied, that port cannot be used by another program. 
+Something that I learned from lab from week 2/3 was about web servers and server client hosting! I did not have any previous experience with how web pages and requests were sent and received, so I found that very interesting. I learned that because the server exists in a different place than the https site I am viewing, multiple people can access and change data that will change the output for all users. I also learned that if a port is already being occupied, that port cannot be used by another program. 
 
 
 
