@@ -3,7 +3,9 @@
 ### Part 1: StringServer Web Server
 ---
 ![image](/stringservercode.png)
+
 ![image](/helloss.png)
+
 After I ran `java StringServer 4000` into the command line terminal, I called the main method for StringServer and received a localhost link to the port 4000. The argument I passed in was a String, which would be parsed as an Integer to indicate which port to utilize. 
 
 This started up the server on my local machine and called the method handleRequest. The arguments to start the server was the port number and a new instance of the Handler. When I initially clicked on the link to visit the page, I didn't append any `\add-message` extensions to the back of the URL, so I received a `404 not found` error just as I programmed. 
@@ -12,6 +14,7 @@ In this screenshot, I added to the end of the URL `/add-message?s=Hello` to add 
 
 
 ![image](/secondmsgss.png)
+
 In this second screenshot, the method `handleRequest(URI url)` was once again called to handle the new link request I made, the updated URI request being passed in. The parameters String array now has the String "This is a second message" in the second value/first index. Now, the value of `output` is changed to `Hello\nThis is a second message\n`. 
 
 
