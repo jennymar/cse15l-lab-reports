@@ -20,27 +20,27 @@ In this second screenshot, the method `handleRequest(URI url)` was once again ca
 
 I chose the bug from the method reversed(int[] arr) in ArrayExamples.java. 
 
-Failure-inducing input: 
+**Failure-inducing input:** 
 ```
 int[] input2 = { 4, 5, 6 };
 assertArrayEquals(new int[]{ 6, 5, 4 }, ArrayExamples.reversed(input2));
 ```
 I inputed a int array with 3 values 4, 5, and 6. 
 
-Non-failure inducing input:
+**Non-failure inducing input:**
 ```
 int[] input1 = { };
 assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
 ```
 I inputed an empty int array with 0 values.
 
-Symptom:
+**Symptom:**
 The failure-inducing input test case returned the error below.
 > arrays first differed at element [0]; expected:[6] but was:[0] at ArrayTests.testReversed(ArrayTests.java:26)
 
 This means that the buggy method contained the value 0 at the index 0, but we expected the program to have the value 6 in that position.
 
-Bug:
+**Bug:** 
 In the original code, the statement within the for loop sets arr to a value from newArray, but newArray is merely an int array with 0 in all positions. Instead, we want to set newArray to a value form arr because arr is the int array with the real values we want to reverse. Additionally, we want to return newArray and not arr because the method wants to return a new array with all elements of the input array reversed, not the original array. 
 
 Buggy Code:
