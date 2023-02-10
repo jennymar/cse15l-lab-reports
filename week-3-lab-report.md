@@ -1,6 +1,6 @@
 # Week 3 Lab Report
 
-> The command I chose to research and base my week 3 lab report off of was: `grep`
+The command I chose to research and base my week 3 lab report off of was: `grep`
 
 #### -c, --count
 With `-c` or `--count`, only a count of selected lines is written to standard output for each file searched. 
@@ -80,7 +80,7 @@ $ grep -i "Bed-AND-Breakfast" written_2/*/*/*.txt
 written_2/travel_guides/berlitz1/HandRIsrael.txt:        Gazit Menachem (Bed-and-Breakfast) ❁ Eilat Town; Tel. (07)
 written_2/travel_guides/berlitz1/HandRLakeDistrict.txt:        B&B (bed-and-breakfast) rate, per person, with a fee added at many
 ```
-I searched for "Bed-AND-Breakfast" and the two outputs have different capitalizations of the phase, with "Bed-and-Breakfast" in HandRIsrael.txt and "bed-and-breakfast" in HandRLakeDistrict.txt. Therefore, it was very helpful to use -i, as we'd otherwise get no results printed out. 
+I searched for "Bed-AND-Breakfast" and the two outputs have different capitalizations of the phase, with "Bed-and-Breakfast" in HandRIsrael.txt and "bed-and-breakfast" in HandRLakeDistrict.txt. Therefore, it was very helpful to use -i, as we'd otherwise get no results printed out since neither capitalizations exactly match the one given in the command.
 
 
 
@@ -164,7 +164,7 @@ $ grep -r "La Mer" written_2
 written_2/travel_guides/berlitz1/HandRHawaii.txt:        top French restaurant (La Mer), and the serene House Without A Key
 written_2/travel_guides/berlitz2/Cuba-WhereToGo.txt:The city’s most famous son, a general from the Ten Years’ War, was born in 1841 at the Casa Natal de Ignacio Agramonte, a handsome, early 19th-century mansion in the city center on Plaza de los Trabajadores. The patriot is remembered through personal effects; he met his death in battle in 1873. Visit La Merced church opposite to see peeling frescoes and the venerated objects stored in the crypt.
 ```
-By utilizing `-r`, we simply just state the directory we want to be searched and do not need the `/*/*...` additions to the end of the directory name. Bash recursively searches every subdirectory within written_2 to find the phrase "La Mer".
+By utilizing `-r`, we simply just state the directory we want to be searched and do not need the `/*/*...` additions to the end of the directory name. Bash recursively searches every subdirectory within written_2 to find the phrase "La Mer". The output shows 2 files that contain "La Mer", HandRHawaii.txt and Cuba-WhereToGo.txt.
 
 
 Example 2: 
@@ -172,4 +172,4 @@ Example 2:
 $ grep -r “barometer” written_2
 written_2/travel_guides/berlitz2/Budapest-WhereoGo.txt:If the ﬁsh are a barometer of a lake’s health, all would appear to be hazard free: about 40 species thrive in it. Balaton pike-perch (fogas) is usually singled out as the tastiest of all. Fishermen operate from shore, from boats, and from platforms set a little distance into the lake. Ice-ﬁshing has been popular since the earliest times, when winter was the only season in which the catch could be preserved and sold in distant parts of Hungary. The frozen lake is also used by ice yachtsmen, whose wind-powered boats skate at hair-raising speeds across the frozen lake.
 ```
-Here is another example of using `-r` to search for the word "barometer" in the entire written_2 folder. The command is very useful if we do not know the architecture of the subdirectories and if we do not know how deep the file we want is, if the file even exists at all. 
+Here is another example of using `-r` to search for the word "barometer" in the entire written_2 folder. The only instance of the word "barometer" is in Budapest-WhereoGo.txt. The command is very useful if we do not know the architecture of the subdirectories and if we do not know how deep the file we want is, if the file even exists at all. 
