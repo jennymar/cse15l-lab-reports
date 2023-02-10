@@ -4,6 +4,7 @@ The command I chose to research and base my week 3 lab report off of was: `grep`
 
 #### -c, --count
 With `-c` or `--count`, only a count of selected lines is written to standard output for each file searched. 
+Source: built-in command manual `man`
 
 Example 1:
 ```
@@ -51,6 +52,7 @@ In the second example, I called `grep -c` to look for the word "city". We can se
 
 #### -i, --ignore-case
 With `-i` or `--ignore-case`, we can perform case insensitive matching when searching for a phrase/word.
+Source: https://www.warp.dev/terminus/make-grep-case-insensitive#:~:text=To%20recap%2C%20the%20grep%20command,or%20%E2%80%94ignore%2Dcase%20flag.
 
 Example 1:
 ```
@@ -87,6 +89,7 @@ I searched for "Bed-AND-Breakfast" and the two outputs have different capitaliza
 
 #### -l, --files-with-matches
 With `-l` or `--files-with-matches`, only the names of files containing selected lines are written to standard output.
+Source: https://phoenixnap.com/kb/grep-command-linux-unix-examples#:~:text=Grep%20is%20a%20Linux%20%2F%20Unix,searching%20through%20large%20log%20files.
 
 Example 1:
 ```
@@ -157,6 +160,7 @@ This is another example of using `grep -l` to search for the word "Sunset" in th
 
 #### -R, -r
 With `-R` or `-r`, the program will recursively search the subdirectories listed. 
+Source: built-in command manual `man`
 
 Example 1:
 ```
